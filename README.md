@@ -1,98 +1,77 @@
-🚨 Intrusion Detection System (IDS) Using Python & Scapy
-📌 Description
+# 🚨 Intrusion Detection System (IDS) Using Python & Scapy
 
-This Intrusion Detection System (IDS) monitors network traffic in real-time to identify suspicious activities and potential security threats.
+## 📌 Description
 
-It leverages the powerful Scapy library to capture and analyze network packets, detecting abnormal patterns such as:
+This Intrusion Detection System (IDS) monitors network traffic in real-time to identify suspicious activities and potential threats.
 
-Unusually large packets
-
-Repetitive traffic patterns
-
-Potential flood attacks
-
-When anomalies are detected, the IDS can automatically take preventive actions — such as blocking suspicious IP addresses using Windows Firewall commands.
+It uses the **Scapy** library to capture and analyze network packets, looking for abnormal patterns such as unusually large packets or repetitive requests. Upon detecting anomalies, the IDS can take automated preventive actions, such as blocking suspicious IP addresses using Windows Firewall commands.
 
 All detected threats and system events are logged for further analysis and review.
 
-✨ Features
-📡 Real-time Packet Monitoring
+---
 
-Captures and analyzes network packets in real-time using Scapy.
+## ✨ Features
 
-📊 Statistical Analysis
+### 📡 Real-time Packet Monitoring
+- Captures and analyzes network packets in real-time using Scapy.
 
-Tracks packet sizes and frequency.
+### 📊 Statistical Analysis
+- Tracks packet sizes and counts to identify unusual traffic patterns.
 
-Identifies unusual traffic patterns.
+### 🚩 Anomaly Detection
 
-🚩 Anomaly Detection
-📦 Large Packet Detection
+#### 📦 Large Packet Detection
+- Flags packets larger than **1500 bytes** as potentially malicious.
 
-Flags packets larger than 1500 bytes as potentially malicious.
+#### 🔄 Repetitive Traffic Detection
+- Detects repetitive packet sizes (more than 100 times) that may indicate a flood attack.
 
-🔄 Repetitive Traffic Detection
+### 🚫 Automated Response
+- Blocks offending IP addresses using Windows Firewall commands.
+- Requires **Administrator privileges**.
 
-Detects repetitive packet sizes occurring more than 100 times.
+### 📝 Logging
+- Logs all detected threats to `ids_logs.log`.
+- Includes timestamps and anomaly details.
 
-Helps identify possible flood attacks.
+### 🔔 Alerting (Extendable)
+- Logging system can be extended to trigger:
+  - Email notifications
+  - SMS alerts
+  - Dashboard monitoring
 
-🚫 Automated Response
+---
 
-Blocks offending IP addresses using Windows Firewall commands.
+## 🛠 Technologies Used
 
-⚠ Requires Administrator privileges.
+- **Python** – Core programming language
+- **Scapy** – Network packet manipulation and analysis
+- **Windows Firewall** – Used for blocking suspicious IP addresses
 
-📝 Logging
+---
 
-Logs all detected threats in ids_logs.log.
+## 🎯 Ideal For
 
-Includes:
+- Network Security Professionals
+- Security Researchers
+- Cybersecurity Students
+- Python Developers learning network security concepts
 
-Timestamp
+---
 
-Source IP
+## 🚀 How to Run
 
-Type of anomaly detected
+### 1️⃣ Clone the Repository
 
-🔔 Alerting (Extendable)
-
-Logging system enables easy integration of:
-
-Email alerts
-
-SMS notifications
-
-Dashboard monitoring
-
-🛠 Technologies Used
-
-🐍 Python – Core programming language
-
-📡 Scapy – Packet capture and analysis
-
-🧱 Windows Firewall – IP blocking mechanism
-
-🎯 Ideal For
-
-🧑‍💻 Network Security Professionals
-
-🕵️ Security Researchers
-
-🧑‍🎓 Python Developers learning network security
-
-🛡 Cybersecurity Students exploring IDS concepts
-
-🚀 How to Run
-1️⃣ Clone the Repository
+```bash
 git clone <repo-url>
 cd <repository-folder>
 2️⃣ Install Required Dependencies
 pip install scapy
-3️⃣ Run the IDS (Admin Privileges Required)
+3️⃣ Run the Program (Administrator Required)
 python ids.py
 
-💡 On some systems:
+Or:
 
 python3 ids.py
 
@@ -104,10 +83,10 @@ All alerts and detections are saved in:
 
 ids_logs.log
 
-You can analyze this file for:
-
-Attack patterns
+You can review this file to analyze:
 
 Suspicious IP addresses
+
+Attack patterns
 
 Traffic anomalies
