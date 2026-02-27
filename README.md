@@ -70,19 +70,20 @@ cd <repository-folder>
 pip install scapy
 3️⃣ Run the Program (Administrator Required)
 python ids.py
-
+```
 Or:
-
+```
 python3 ids.py
 
+```
 ⚠ Make sure to run the terminal as Administrator, otherwise firewall blocking will not work.
 
 📂 Log File
 
 All alerts and detections are saved in:
-
+```
 ids_logs.log
-
+```
 You can review this file to analyze:
 
 Suspicious IP addresses
